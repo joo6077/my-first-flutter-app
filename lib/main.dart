@@ -6,15 +6,14 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final wordPair = WordPair.random();
+    final randomWord = WordPair.random();
     return MaterialApp(
-      title: 'Welcome to Flutter',
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Welcome to Flutter'),
+          title: Text("naming app"),
         ),
         body: Center(
-          child: Text(wordPair.asCamelCase),
+          child: Text(randomWord.asPascalCase, textScaleFactor: 1.5),
         ),
       ),
     );
